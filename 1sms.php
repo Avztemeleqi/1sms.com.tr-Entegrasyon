@@ -1,13 +1,13 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
-$postUrl='http://panel.1sms.com.tr:8080/api/smspost/v1';
-$username='USERNAME';
-$password='PASSWORD';
+$postUrl='http://panel.1sms.com.tr:8080/api/smspost/v1'; // POST URL
+$username='USERNAME'; // Kullanıcı Adı
+$password='PASSWORD'; // Şifre
 $validity='2880'; // default
-$sendDateTime='2021.2.1.19.25.0'; // 2021.2.1.19.25.0 şeklinde girilecek
-$header='TEST'; // onaylanmış mesaj başlığı olmalıdır
-$numara1='905444444444';
-$mesaj1='MESAJ İÇERİĞİ';
+$sendDateTime='2021.2.1.19.25.0'; // 2021.2.1.19.25.0 Şeklinde Girilecek
+$header='TEST'; // Onaylanmış Mesaj Başlığı Olmalıdır
+$numara1='905444444444'; // Numara 90'lı girmeniz önerilir
+$mesaj1='MESAJ İÇERİĞİ'; // Mesaj İçeriği
 $postData = "" . "<sms>" . "<username>".$username."</username>" . "<password>".$password."</password>" . "<header>".$header."</header>" . "<validity>".$validity."</validity>" . "<message>" . "<gsm>" . "<no>".$numara1."</no>" . "</gsm>" . "<msg>".$mesaj1."</msg>" . "</message>" . "</sms>";
 
 $ch = curl_init();

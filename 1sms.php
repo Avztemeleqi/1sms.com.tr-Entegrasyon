@@ -8,7 +8,7 @@ $sendDateTime='2021.2.1.19.25.0'; // 2021.2.1.19.25.0 Şeklinde Girilecek
 $header='TEST'; // Onaylanmış Mesaj Başlığı Olmalıdır
 $numara1='905444444444'; // Numara 90'lı girmeniz önerilir
 $mesaj1='MESAJ İÇERİĞİ'; // Mesaj İçeriği
-$postData = "" . "<sms>" . "<username>".$username."</username>" . "<password>".$password."</password>" . "<header>".$header."</header>" . "<validity>".$validity."</validity>" . "<message>" . "<gsm>" . "<no>".$numara1."</no>" . "</gsm>" . "<msg>".$mesaj1."</msg>" . "</message>" . "</sms>";
+$postData = "" . "<sms>" . "<username>".$username."</username>" . "<password>".$password."</password>" . "<header>".$header."</header>" . "<validity>".$validity."</validity>" . "<message>" . "<gsm>" . "<no>".$numara1."</no>" . "</gsm>" . "<msg><![CDATA[".$mesaj1."]]></msg>" . "</message>" . "</sms>";
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $postUrl);
